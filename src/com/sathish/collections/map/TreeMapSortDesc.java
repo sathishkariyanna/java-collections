@@ -21,7 +21,6 @@ public class TreeMapSortDesc {
 
 	public static void main(String[] args) {
 		System.out.println("TreeMap Desc Order Example");
-		System.out.println();
 
 		TreeMap<String, String> map1 = new TreeMap<String, String>(new DescOrder());
 		map1.put("A1", "A1 value");

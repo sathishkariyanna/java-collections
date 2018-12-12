@@ -2,6 +2,7 @@ package com.sathish.collections.map;
 
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * 
@@ -12,7 +13,7 @@ public class HashTableExample {
 	// HashTable is synchronized
 	public static void main(String[] args) {
 		// Creating a Hashtable
-		Hashtable<String, String> hashtable = new Hashtable<String, String>();
+		Map<String, String> hashtable = new Hashtable<String, String>();
 
 		// Adding Key and Value pairs to Hashtable
 		hashtable.put("Key1", "Tom");

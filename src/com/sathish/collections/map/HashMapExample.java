@@ -16,7 +16,7 @@ import java.util.TreeMap;
 public class HashMapExample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
 		map.put(1, "One");
 		map.put(3, "Three");

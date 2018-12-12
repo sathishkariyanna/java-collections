@@ -16,10 +16,14 @@ public class PriorityQueueExample {
 
 		// natural ordering example of priority queue
 		Queue<Integer> integerPriorityQueue = new PriorityQueue<>(7);
-		Random rand = new Random();
-		for (int i = 0; i < 7; i++) {
-			integerPriorityQueue.add(new Integer(rand.nextInt(100)));
-		}
+		integerPriorityQueue.add(1);
+		integerPriorityQueue.add(3);
+		integerPriorityQueue.add(2);
+		integerPriorityQueue.add(7);
+		integerPriorityQueue.add(4);
+		integerPriorityQueue.add(6);
+		integerPriorityQueue.add(5);
+		
 		for (int i = 0; i < 7; i++) {
 			Integer in = integerPriorityQueue.poll();
 			System.out.println("Processing Integer:" + in);
