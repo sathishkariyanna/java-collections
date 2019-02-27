@@ -18,10 +18,15 @@ public class TreeSetExample {
 		tree_SetA.add("Sathish");
 		tree_SetA.add("Tom");
 		tree_SetA.add("King");
-		tree_SetA.add("Mike");
-		tree_SetA.add("Tom");
-		System.out.print("Set output without the duplicates");
-		System.out.println(tree_SetA);
+		if(tree_SetA.add("Mike"))
+			System.out.println("unique element added");
+		if(tree_SetA.add("Tom")) {
+			System.out.println("duplicate element overwritten"); 
+			//in Set it will not over write			
+		}else {
+			System.out.println("duplicate element did not add");
+		}
+		System.out.println("TreeSet output without the duplicates : " + tree_SetA);
 
 		// creating reverse set
 		tree_SetA_Reverse = ((TreeSet<String>) tree_SetA).descendingSet();
@@ -36,26 +41,23 @@ public class TreeSetExample {
 		// To find union
 		Set<String> union = new TreeSet<String>(tree_SetA);
 		union.addAll(tree_SetB);
-		System.out.print("Union of the two Set");
-		System.out.println(union);
+		System.out.println("Union of the two Set : " +union);
 
 		// To find intersection
 		Set<String> intersection = new TreeSet<String>(tree_SetA);
 		intersection.retainAll(tree_SetB);
-		System.out.print("Intersection of the two Set");
-		System.out.println(intersection);
+		System.out.println("Intersection of the two Set : " + intersection);
 
 		// To find the symmetric difference
 		Set<String> difference = new TreeSet<String>(tree_SetA);
 		difference.removeAll(tree_SetB); // something like A-B
-		System.out.print("Difference of the two Set");
-		System.out.println(difference);
+		System.out.println("Difference of the two Set : " + difference);
 
 		// Using isEmpty() to verify for the emptiness
 		System.out.println("The set is empty? " + tree_SetA.isEmpty());
 
 		// Does the set contain "Sathish"
-		System.out.println("Does the set contain 'Sathish'?" + tree_SetA.contains("Sathish"));
+		System.out.println("Does the set contain 'Sathish'? " + tree_SetA.contains("Sathish"));
 
 		// Getting the size of the set
 		System.out.println("The size of the set is " + tree_SetA.size());
@@ -71,7 +73,7 @@ public class TreeSetExample {
 		// displaying the set data using Iterator
 		System.out.println("Iterating Set data: ");
 		while (iterator.hasNext()) {
-			System.out.println(iterator.next() + " ");
+			System.out.println(iterator.next() + " ");			
 		}
 
 		// Clearing the TreeSet using clear() method
