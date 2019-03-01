@@ -37,7 +37,7 @@ public class TreeSetExample {
 		tree_SetB.add("King");
 		tree_SetB.add("Alex");
 		tree_SetB.add("Tom");
-
+		//tree_SetB.add(null); //TreeSet does not allow null object
 		// To find union
 		Set<String> union = new TreeSet<String>(tree_SetA);
 		union.addAll(tree_SetB);

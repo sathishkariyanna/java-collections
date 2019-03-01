@@ -57,6 +57,7 @@ public class LinkedHashSetExample {
 		lhset2.add(6);
 		lhset2.add(2);
 		lhset2.add(73);
+		lhset2.add(null);//LinkedHashSet allows one null object
 		System.out.println("LinkedHashSet of Integer : " + lhset2);
 	}
 

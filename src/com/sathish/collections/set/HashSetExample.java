@@ -26,6 +26,7 @@ public class HashSetExample {
 		}else {
 			System.out.println("duplicate element did not add");
 		}
+
 		System.out.println("Hash set : " + hash_SetA);
 
 		// Set demonstration using TreeSet (Converting HashSet to TreeSet)
@@ -37,7 +38,8 @@ public class HashSetExample {
 		hash_SetB.add("King");
 		hash_SetB.add("Alex");
 		hash_SetB.add("Tom");
-
+		
+		hash_SetB.add(null); //HashSet and LinkedHashSet allows one null object
 		// To find union
 		Set<String> union = new HashSet<String>(hash_SetA);
 		union.addAll(hash_SetB);
